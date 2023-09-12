@@ -6,9 +6,9 @@ app.get('/products', (req, res) => {
     
     require('dotenv').config({PATH:'./etc/secrets'})
     
-    const mysql = require('mysql2')
+    const mysql = require('mysql')
     //res.send("Produtos do banco de dados...");
-    console.log(process.env.DATABASE_URL)
+    //console.log(process.env.DATABASE_URL)
     const connection = mysql.createConnection(process.env.DATABASE_URL)
     console.log('Connected to PlanetScale!')
     
