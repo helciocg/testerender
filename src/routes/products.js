@@ -4,7 +4,7 @@ const app = Router();
 app.get('/products', (req, res) => {
     
     
-    require('dotenv').config()
+    require('dotenv').config({PATH:'./etc/secrets'})
     
     const mysql = require('mysql2')
     //res.send("Produtos do banco de dados...");
